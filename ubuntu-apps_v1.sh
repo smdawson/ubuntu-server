@@ -96,8 +96,7 @@ sleep 1
 echo -e " [${r}!${endc}]::Installing [${b}Sublist3r${enda}]"
 cd ~/tools/
 git clone https://github.com/aboul3la/Sublist3r.git
-cd Sublist3r*
-cd Sublist3r*
+cd Sublist3r
 sudo pip3 install -r requirements.txt
 cd ~/tools/
 echo -e " [${g}✔${endc}]::${bu}${b}[Sublist3r]${enda}${endc} Installed!"
@@ -114,14 +113,13 @@ echo -e " [${r}!${endc}]::Installing [${b}Aquatone${enda}]"
 cd ~/tools/
 wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
-cp aquatone /usr/local/bin
+sudo cp aquatone /usr/local/bin
 echo -e " [${g}✔${endc}]::${bu}${b}[Aquatone]${enda}${endc} Installed!"
 sleep 1
 
 #install chromium
 echo -e " [${r}!${endc}]::Installing [${b}Chromium${enda}]"
 sudo snap install chromium
-aquatone -chrome-path /snap/bin/chromium
 echo -e " [${g}✔${endc}]::${bu}${b}[Chromium]${enda}${endc} Installed!"
 sleep 1
 
