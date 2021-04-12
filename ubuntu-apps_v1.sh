@@ -40,7 +40,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20210409"
+version="20210412"
 
 ####################### Functions ########################
 
@@ -50,14 +50,19 @@ version="20210409"
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-#make tools directory
-mkdir ~/tools
-cd ~/tools/
-
 #initial installs
 sudo apt-get install -y git unzip
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
+
+#clone SecLists
+mkdir ~/git/
+cd ~/git/
+git clone https://github.com/danielmiessler/SecLists.git
+
+#make tools directory
+mkdir ~/tools
+cd ~/tools/
 
 #install go
 if [[ -d "$GOROOT" ]]; then
