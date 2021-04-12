@@ -60,7 +60,10 @@ sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
 
 #install go
-if [[ -z "$GOPATH" ]]; then
+if [[ -d "$GOROOT" ]]; then
+	echo -e " [${g}✔${endc}]::[${b}Golang${enda}] Is Already Installed!"
+	sleep 1
+else 	
 	echo -e " [${r}!${endc}]::Installing [${b}Golang 1.16.3${enda}]"
 	cd ~
 	curl -O https://dl.google.com/go/go1.16.3.linux-amd64.tar.gz
@@ -76,8 +79,6 @@ if [[ -z "$GOPATH" ]]; then
 	source ~/.profile
 	echo -e " [${g}✔${endc}]::${bu}${b}["go version"]${enda}${endc} Installed!"
 	sleep 1
-else 
-	echo -e " [${g}✔${endc}]::[${b}Golang${enda}] Is Already Installed!"
 fi
 
 #install FFUF
