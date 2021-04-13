@@ -66,10 +66,10 @@ cd ~/tools/
 
 #install go
 if [[ -d "$GOROOT" ]]; then
-	echo -e " [${g}✔${endc}]::[${b}Golang${enda}] Is Already Installed!"
+	echo -e " [${g}✔${endc}]::${y}${b}[Golang]${enda}${endc} Is Already Installed!"
 	sleep 1
 else 	
-	echo -e " [${r}!${endc}]::Installing [${b}Golang 1.16.3${enda}]"
+	echo -e " [${r}!${endc}]::Installing ${y}${b}[Golang 1.16.3]${enda}${endc}"
 	cd ~
 	curl -O https://dl.google.com/go/go1.16.3.linux-amd64.tar.gz
 	sudo tar -xvf go1.16.3.linux-amd64.tar.gz
@@ -81,56 +81,56 @@ else
 	echo 'export GOROOT=/usr/local/go' >> ~/.profile
 	echo 'export GOPATH=$HOME/go'	>> ~/.profile			
 	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.profile	
-	source ~/.profile
-	echo -e " [${g}✔${endc}]::${bu}${b}["go version"]${enda}${endc} Installed!"
-	sleep 1
+	. ~/.profile
+	echo -e " [${g}✔${endc}]::${bu}${b}[golang 1.16.3]${enda}${endc} Installed!"
+	sleep 5
 fi
 
 #install FFUF
-echo -e " [${r}!${endc}]::Installing [${b}ffuf${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[ffuf]${enda}${endc}"
 go get -u github.com/ffuf/ffuf
 echo -e " [${g}✔${endc}]::${bu}${b}[ffuf]${enda}${endc} Installed!"
-sleep 1
+sleep 5
 
 #install nmap
-echo -e " [${r}!${endc}]::Installing [${b}nmap${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[nmap]${enda}${endc}"
 sudo apt-get install -y nmap
 echo -e " [${g}✔${endc}]::${bu}${b}[nmap]${enda}${endc} Installed!"
-sleep 1
+sleep 5
 
 #install sublist3r
-echo -e " [${r}!${endc}]::Installing [${b}Sublist3r${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[Sublist3r]${enda}${endc}"
 cd ~/tools/
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
 sudo pip3 install -r requirements.txt
 cd ~/tools/
 echo -e " [${g}✔${endc}]::${bu}${b}[Sublist3r]${enda}${endc} Installed!"
-sleep 1
+sleep 5
 
 #install Amass
-echo -e " [${r}!${endc}]::Installing [${b}Amass${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[Amass]${enda}${endc}"
 sudo snap install amass
 echo -e " [${g}✔${endc}]::${bu}${b}[Amass]${enda}${endc} Installed!"
-sleep 1
+sleep 5
 
 #install aquatone
-echo -e " [${r}!${endc}]::Installing [${b}Aquatone${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[Aquatone]${enda}${endc}"
 cd ~/tools/
 wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
 sudo cp aquatone /usr/local/bin
 echo -e " [${g}✔${endc}]::${bu}${b}[Aquatone]${enda}${endc} Installed!"
-sleep 1
+sleep 5
 
 #install chromium
-echo -e " [${r}!${endc}]::Installing [${b}Chromium${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[Chromium]${enda}${endc}"
 sudo snap install chromium
 echo -e " [${g}✔${endc}]::${bu}${b}[Chromium]${enda}${endc} Installed!"
-sleep 1
+sleep 5
 
 #install httprobe
-echo -e " [${r}!${endc}]::Installing [${b}httprobe${enda}]"
+echo -e " [${r}!${endc}]::Installing ${y}${b}[httprobe]${enda}${endc}"
 go get -u github.com/tomnomnom/httprobe 
 echo -e " [${g}✔${endc}]::${bu}${b}[httprobe]${enda}${endc} Installed!"
-sleep 1
+sleep 5
