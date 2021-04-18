@@ -14,3 +14,7 @@ A script to install bug bounty hunting tools
 - Amass - https://github.com/OWASP/Amass
 - Aquatone - https://github.com/michenriksen/aquatone
 - httprobe - https://github.com/tomnomnom/httprobe
+- waybackurls - https://github.com/tomnomnom/waybackurls
+- subfinder - https://github.com/projectdiscovery/subfinder
+- httpx - https://github.com/github.com/projectdiscovery/httpx
+- kiterunner - https://github.com/assetnote/kiterunner

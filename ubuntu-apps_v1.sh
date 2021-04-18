@@ -134,3 +134,37 @@ echo -e " [${r}!${endc}]::Installing ${y}${b}[httprobe]${enda}${endc}"
 go get -u github.com/tomnomnom/httprobe 
 echo -e " [${g}✔${endc}]::${bu}${b}[httprobe]${enda}${endc} Installed!"
 sleep 5
+
+#install wabackurls
+echo -e " [${r}!${endc}]::Installing ${y}${b}[waybackurls]${enda}${endc}"
+go get github.com/tomnomnom/waybackurls
+echo -e " [${g}✔${endc}]::${bu}${b}[waybackurls]${enda}${endc} Installed!"
+sleep 5
+
+#install subfinder
+echo -e " [${r}!${endc}]::Installing ${y}${b}[subfinder]${enda}${endc}"
+GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+echo -e " [${g}✔${endc}]::${bu}${b}[subfinder]${enda}${endc} Installed!"
+sleep 5
+
+#install httpx
+echo -e " [${r}!${endc}]::Installing ${y}${b}[httpx]${enda}${endc}"
+GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+echo -e " [${g}✔${endc}]::${bu}${b}[httpx]${enda}${endc} Installed!"
+sleep 5
+
+#install kiterunner
+echo -e " [${r}!${endc}]::Installing ${y}${b}[kiterunner]${enda}${endc}"
+cd ~/tools/
+wget https://github.com/assetnote/kiterunner/releases/download/v1.0.2/kiterunner_1.0.2_linux_amd64.tar.gz
+tar -xvzf kiterunner_1.0.2_linux_amd64.tar.gz
+sudo kr /usr/local/bin
+mkdir ~/wordlists/
+cd ~/wordlists/
+wget https://wordlists-cdn.assetnote.io/data/kiterunner/routes-large.kite.tar.gz
+wget https://wordlists-cdn.assetnote.io/data/kiterunner/routes-small.kite.tar.gz
+tar -xvzf routes-large.kite.tar.gz
+tar -xvzf routes-small.kite.tar.gz
+cd ~/tools/
+echo -e " [${g}✔${endc}]::${bu}${b}[kiterunner]${enda}${endc} Installed!"
+sleep 5
